@@ -26,7 +26,7 @@
 
 		  	$statement_update_details = $pdo->prepare($sql_update_details);
 		  	$statement_update_details->execute(array($noControl_2,$nombreEstudiante,$apellido_p_Estudiante,$apellido_m_Estudiante,$semestre,$carrera_clave, $noControl));
-		  	header('Location: alumnos-editar.php');
+		  	header('Location: alumnoseditar.php');
 	}	
 
 	if(isset( $_GET['No_control'] ) ){
@@ -144,7 +144,7 @@
 <div class="container" >
 	<div class="col s12">
 		<div class="row">
-			<a class="btn waves-effect waves-light cyan right" href="alumnos.php">Mostrar todo</a>
+			<a class="btn waves-effect waves-light cyan right" href="alumnoseditar.php">Mostrar todo</a>
 			<h3>Estudiantes</h3>
 			<table class="striped">
 					
@@ -172,7 +172,7 @@
 						<td><?php echo $rs2['semestre']?></td>
 						<td><?php echo $rs2['nombre_carrera']?></td>
 
-						<td><a class="btn waves-effect waves-light cyan lighten-1" href="alumnos-editar.php?No_control=<?php echo $rs2['No_control']; ?>">Editar</a></td>
+						<td><a class="btn waves-effect waves-light cyan lighten-1" href="alumnoseditar.php?No_control=<?php echo $rs2['No_control']; ?>">Editar</a></td>
 
 						<td><a class="btn waves-effect waves-light red" onclick="delete_alumnos('<?php echo $rs2["No_control"]; ?>')" href="#">ELIMINAR</a>
 					</tr>
